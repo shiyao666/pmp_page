@@ -119,7 +119,7 @@
     width: 100%;
     margin-top: 104px;
     height: 570px;
-    background: url(src/max_bg.png);
+    background: url(src/pmp_bg.png);
     background-size: 1920px 550px;
     background-position: center 0;
     background-repeat: no-repeat;
@@ -166,7 +166,35 @@
                 }
             }
         }
+        .pmp_top_ul {
+            padding-top: 4em;
+            li {
+                span {
+                    border-width: 0;
+                    background-image: url(src/pmp_start.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-color: transparent;
+                }
+            }
+        }
     }
+    .pmp_banner_img {
+        dt {
+            width: 100%;
+            span:first-child {
+                padding-right: 0.8em;
+                position: relative;
+            }
+        }
+        img {
+            margin-top: 3em;
+        }
+    }
+}
+
+.pmp_banner {
+    margin-top: 60px;
 }
 
 //活动新闻区域

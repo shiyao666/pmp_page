@@ -965,7 +965,7 @@ button {
   width: 100%;
   margin-top: 104px;
   height: 570px;
-  background: url(src/max_bg.png);
+  background: url(src/pmp_bg.png);
   background-size: 1920px 550px;
   background-position: center 0;
   background-repeat: no-repeat;
@@ -1006,6 +1006,24 @@ button {
           margin: auto;
           border: 1px solid #11cdd9;
           background-color: #11cdd919; }
+    .soft_banner .soft_banner_img .pmp_top_ul {
+      padding-top: 4em; }
+      .soft_banner .soft_banner_img .pmp_top_ul li span {
+        border-width: 0;
+        background-image: url(src/pmp_start.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: transparent; }
+  .soft_banner .pmp_banner_img dt {
+    width: 100%; }
+    .soft_banner .pmp_banner_img dt span:first-child {
+      padding-right: 0.8em;
+      position: relative; }
+  .soft_banner .pmp_banner_img img {
+    margin-top: 3em; }
+
+.pmp_banner {
+  margin-top: 60px; }
 
 .soft_act_new {
   width: 100%;
