@@ -1009,13 +1009,13 @@ button {
 
 .soft_act_new {
   width: 100%;
-  padding: 0 0 0 6%;
+  padding: 6em 0 0 6%;
   position: relative;
   z-index: 1;
   height: initial; }
   .soft_act_new .soft_act_title {
-    padding: 0 4%;
-    height: 4em; }
+    padding-bottom: 4em;
+    height: 12em; }
     .soft_act_new .soft_act_title span {
       position: relative;
       float: left;
@@ -1024,8 +1024,7 @@ button {
       color: #821C21cc;
       background-color: rgba(238, 238, 238, 0.85);
       text-align: center;
-      line-height: 3em;
-      margin-top: -2em; }
+      line-height: 3em; }
       @media screen and (max-width: 768px) {
         .soft_act_new .soft_act_title span {
           font-size: 1.2em;
@@ -1068,23 +1067,22 @@ button {
 .soft_act_content {
   float: right;
   width: 100%;
-  height: 516px;
-  position: relative; }
+  height: 580px;
+  position: relative;
+  box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18); }
 
 .soft_act_content1 {
-  box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18);
   padding-bottom: 2em; }
 
 .soft_act_content3 {
-  background-color: #ffffff;
-  box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18); }
+  background-color: #ffffff; }
 
 .soft_act_content2,
 .soft_act_content3 {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  padding: 7% 0% 2% 0%; }
+  padding: 5% 0% 2% 0%; }
 
 .soft_act_content1,
 .soft_act_content2,
@@ -1110,7 +1108,8 @@ button {
 .soft_act_part1 {
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-left: 10%; }
   .soft_act_part1 li {
     float: left;
     width: 70%;
@@ -1118,32 +1117,27 @@ button {
     font-size: 2em;
     text-align: center;
     opacity: 0.8;
-    color: #ffffff;
-    line-height: 105px; }
+    line-height: 105px;
+    padding-left: 3em;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6); }
   .soft_act_part1 ul {
-    float: left;
-    padding-left: 5%;
-    width: 50%; }
+    float: left; }
   .soft_act_part1 .soft_act1_ul1 {
-    overflow: hidden; }
+    overflow: hidden;
+    padding-top: 2em;
+    padding-bottom: 1em; }
     .soft_act_part1 .soft_act1_ul1 li:first-child {
-      background-color: #1945ef;
       margin-bottom: 30px; }
     .soft_act_part1 .soft_act1_ul1 li:nth-of-type(2) {
-      background-color: #fe6021;
       margin-bottom: 40px; }
-    .soft_act_part1 .soft_act1_ul1 li:nth-of-type(3) {
-      background-color: #906aff; }
   .soft_act_part1 .soft_act1_ul2 {
-    overflow: hidden; }
+    overflow: hidden;
+    padding-top: 2em;
+    padding-bottom: 1em; }
     .soft_act_part1 .soft_act1_ul2 li:first-child {
-      background-color: #3ec7f7;
       margin-bottom: 30px; }
     .soft_act_part1 .soft_act1_ul2 li:nth-of-type(2) {
-      background-color: #fbbc3f;
       margin-bottom: 40px; }
-    .soft_act_part1 .soft_act1_ul2 li:nth-of-type(3) {
-      background-color: #fe6021; }
   .soft_act_part1 li.active {
     width: 407px;
     height: 119px;
@@ -1195,10 +1189,9 @@ button {
 
 .soft_act_content1 {
   overflow: hidden;
-  padding-top: 7%; }
+  padding-top: 5%; }
   .soft_act_content1 ul {
     float: left;
-    width: 30%;
     overflow: hidden;
     border-right: 1px dotted #a2a2a2;
     padding-top: 2em; }
@@ -1217,22 +1210,6 @@ button {
         font-size: 1.2em; }
   .soft_act_content1 ul:last-child {
     border: 0; }
-
-.soft_test_info {
-  width: 100%; }
-  .soft_test_info .soft_info_title {
-    width: 100%;
-    padding-bottom: 2em; }
-    .soft_test_info .soft_info_title span {
-      display: block;
-      border-radius: 2px;
-      width: 10em;
-      line-height: 2em;
-      font-size: 1.2em;
-      text-align: center;
-      margin: auto;
-      color: #FFFFFF;
-      background-color: #c30000; }
 
 .soft_info_content {
   overflow: hidden;
@@ -1276,9 +1253,19 @@ button {
   border-left: 1em solid transparent;
   border-right: 1em solid transparent; }
 
+.soft_info_content {
+  overflow: hidden; }
+
 .soft_info_left,
 .soft_info_right {
+  float: left;
   padding: 0; }
+
+.soft_info_left {
+  width: 60%; }
+
+.soft_info_right {
+  width: 40%; }
 
 .soft_info_part1,
 .soft_info_part2 {
@@ -1348,20 +1335,42 @@ button {
   text-align: center;
   position: relative;
   font-weight: normal; }
-@media screen and (min-width: 768px) {
-  .soft_learn_title dt {
-    width: 15em; } }
-.soft_learn_title dt::before {
-  position: absolute;
-  display: block;
-  content: ' ';
-  width: 1.3em;
-  height: 1.3em;
-  left: -0.6em;
-  top: 0em;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(src/team_title.png); }
+
+.soft_two_big {
+  height: 4em; }
+
+.soft_title_notes {
+  width: 100%;
+  padding: 2em 0; }
+  .soft_title_notes span {
+    display: block;
+    width: 100%;
+    font-size: 1.2em;
+    line-height: 2em;
+    text-align: center; }
+
+.soft_two_title .soft_two_content {
+  width: 100%; }
+  .soft_two_title .soft_two_content dt {
+    display: block;
+    font-size: 1.5em;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    width: 5em; }
+  .soft_two_title .soft_two_content dt:before {
+    content: ' ';
+    display: block;
+    width: 2em;
+    position: absolute;
+    height: 2em;
+    left: -2em;
+    top: -0.7em;
+    background-image: url(src/team_title.png);
+    background-repeat: no-repeat;
+    background-size: contain; }
+.soft_two_title .soft_two_content2 dt {
+  width: 9em; }
 
 .soft_learn_content {
   padding: 2em 1em;
@@ -1431,15 +1440,19 @@ button {
       width: 100%;
       color: #821C21;
       background-color: #eee;
-      padding-left: 8em; }
+      padding-left: 8em;
+      height: 140px; }
       .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li span {
         float: left;
         width: 100%;
         line-height: 62px; }
       .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li span:first-child {
         font-size: 1.2em; }
-      .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li span:nth-of-type(2) {
-        font-size: 1.5em; }
+      .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li span:nth-of-type(2),
+      .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li span:nth-of-type(3) {
+        font-size: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em; }
     .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li::before {
       position: absolute;
       content: ' ';
@@ -1479,7 +1492,7 @@ button {
       top: calc(50% - 1em); }
 
 .soft_lesson_content {
-  height: 372px;
+  height: 420px;
   width: 100%;
   background-position-y: 0.7em;
   border-top: 1px solid #969696;
@@ -1487,7 +1500,7 @@ button {
 
 .soft_lesson_top {
   width: 100%;
-  height: 182px;
+  height: 210px;
   padding: 3em 5%;
   overflow: hidden; }
   .soft_lesson_top span {
@@ -1504,7 +1517,7 @@ button {
 
 .soft_lesson_bg {
   width: 100%;
-  height: 190px;
+  height: 210px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 40%; }
@@ -1532,6 +1545,10 @@ button {
   margin: auto;
   margin-top: -1em;
   background-color: #fff; }
+
+@media screen and (min-width: 768px) {
+  .soft_team_title dt {
+    width: 6em; } }
 
 .soft_lesson_title dt::before {
   position: absolute;
@@ -1602,93 +1619,106 @@ button {
   background-size: contain;
   left: calc(50% - 3.5em); }
 
+@media screen and (min-width: 768px) {
+  .pmp_lesson_title .soft_team_title dt {
+    width: 8em; } }
+
+@media screen and (min-width: 768px) {
+  .pmp_team_title .soft_team_title dt {
+    width: 6em; } }
+
+@media screen and (min-width: 768px) {
+  .soft_class_way dt {
+    width: 6em; } }
+
+.soft_titile_box {
+  padding-top: 2em;
+  padding-bottom: 1em; }
+
 .soft_team_content {
   overflow: hidden;
   position: relative;
-  height: 900px;
+  height: 450px;
   width: 100%; }
-  .soft_team_content .soft_team_item {
-    margin-right: 2em;
+
+.soft_team_item {
+  float: left;
+  width: 22%;
+  border-radius: 4px;
+  position: relative; }
+
+.soft_team_item {
+  position: absolute; }
+
+.soft_team_middle {
+  background-color: #eee;
+  color: #08345a;
+  font-size: 1.2em;
+  width: 100%;
+  height: 9em;
+  padding-top: 6em;
+  margin-top: 4em;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+  .soft_team_middle span {
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+    display: block; }
+
+.soft_team_top {
+  position: relative;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  padding-top: 1em; }
+  .soft_team_top span {
+    display: block;
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    margin: auto;
+    background-repeat: no-repeat;
+    border: 2px solid #fff;
+    background-size: cover;
+    margin-top: 2em; }
+
+.soft_team_item:first-child {
+  left: 2%;
+  top: 0; }
+  .soft_team_item:first-child .soft_team_top span {
+    background-image: url(src/liupeichun.jpg); }
+
+.soft_team_item:nth-of-type(2) {
+  left: 26%;
+  top: 0; }
+  .soft_team_item:nth-of-type(2) .soft_team_top span {
+    background-image: url(src/liufang.jpg); }
+
+.soft_team_item:nth-of-type(3) {
+  left: 50%;
+  top: 0; }
+  .soft_team_item:nth-of-type(3) .soft_team_top span {
+    background-image: url(src/songdan.jpg); }
+
+.soft_team_item:nth-of-type(4) {
+  left: 74%;
+  top: 0; }
+  .soft_team_item:nth-of-type(4) .soft_team_top span {
+    background-image: url(src/wangqifu.jpg); }
+
+.soft_team_bottom {
+  width: 100%;
+  padding-top: 4em;
+  overflow: hidden;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+  .soft_team_bottom span {
     float: left;
-    width: 30%;
-    border-radius: 4px;
-    position: relative; }
-  .soft_team_content .soft_team_item {
-    position: absolute; }
-  .soft_team_content .soft_team_item:first-child {
-    left: 2%;
-    top: 0; }
-  .soft_team_content .soft_team_item:nth-of-type(2) {
-    left: 35%;
-    top: 0; }
-  .soft_team_content .soft_team_item:nth-of-type(3) {
-    left: 68%;
-    top: 0; }
-  .soft_team_content .soft_team_item:nth-of-type(4) {
-    left: 2%;
-    top: 30em; }
-  .soft_team_content .soft_team_item:nth-of-type(5) {
-    left: 35%;
-    top: 30em; }
-  .soft_team_content .soft_team_item:nth-of-type(6) {
-    left: 68%;
-    top: 30em; }
-  .soft_team_content .soft_team_middle {
-    background-color: #eee;
-    color: #08345a;
-    font-size: 1.2em;
     width: 100%;
-    height: 9em;
-    padding-top: 6em;
-    margin-top: 4em;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px; }
-    .soft_team_content .soft_team_middle span {
-      width: 100%;
-      line-height: 2em;
-      text-align: center;
-      display: block; }
-  .soft_team_content .soft_team_top {
-    position: relative;
-    width: 100%;
-    height: 0;
-    top: 0;
-    left: 0;
-    padding-top: 1em; }
-    .soft_team_content .soft_team_top span {
-      display: block;
-      width: 8em;
-      height: 8em;
-      border-radius: 50%;
-      margin: auto;
-      background-image: url(src/team_logo1.png);
-      background-repeat: no-repeat;
-      border: 2px solid #fff;
-      background-size: contain;
-      margin-top: 2em; }
-  .soft_team_content .soft_team_item.active .soft_team_middle {
-    height: 13em;
-    padding-top: 10em;
-    margin-top: 0;
-    color: #fff;
-    background-color: #08345a;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6); }
-  .soft_team_content .soft_team_item.active .soft_team_top span {
-    width: 9em;
-    height: 9em; }
-  .soft_team_content .soft_team_item.active .soft_team_bottom {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6); }
-  .soft_team_content .soft_team_bottom {
-    width: 100%;
-    padding-top: 4em;
-    overflow: hidden;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px; }
-    .soft_team_content .soft_team_bottom span {
-      float: left;
-      width: 100%;
-      line-height: 2em;
-      text-align: center; }
+    line-height: 2em;
+    text-align: center; }
 
 .soft_largest_box8 {
   background-color: #347dbb;
@@ -1703,39 +1733,15 @@ button {
 
 .soft_trade_top {
   position: relative;
-  z-index: 1; }
-
-.soft_trade_hdiv {
-  color: #000;
-  padding-top: 6em;
-  padding-bottom: 2em; }
-  .soft_trade_hdiv dt {
-    position: relative;
-    display: block;
-    font-size: 2em;
-    width: 8em;
-    text-align: center;
-    height: 1.5em;
-    margin: auto; }
-  .soft_trade_hdiv dt::before {
-    position: absolute;
-    display: block;
-    content: ' ';
-    width: 1.3em;
-    height: 1.3em;
-    left: 0.2em;
-    top: -0.1em;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(src/team_title.png); }
-  .soft_trade_hdiv span {
-    display: block;
-    line-height: 2em;
-    text-align: center;
-    margin: auto; }
+  z-index: 1;
+  padding-top: 6em; }
 
 .soft_server {
   padding-top: 4em; }
+
+@media screen and (min-width: 768px) {
+  .soft_serve_title dt {
+    width: 10em; } }
 
 .soft_srver_row1 {
   padding-top: 6em; }
@@ -1772,35 +1778,13 @@ button {
     width: 100%;
     display: block; }
 
-.soft_open_row {
-  padding-top: 4em; }
-
 .soft_open_part {
   padding-left: 3em;
   padding-top: 5em;
   overflow: hidden; }
-  .soft_open_part .soft_open_title {
-    font-weight: normal;
-    width: 100%;
-    float: left; }
+  @media screen and (min-width: 768px) {
     .soft_open_part .soft_open_title dt {
-      font-size: 2em;
-      width: 9em;
-      text-align: center;
-      margin: auto;
-      line-height: 4em;
-      position: relative; }
-    .soft_open_part .soft_open_title dt::before {
-      position: absolute;
-      display: block;
-      content: ' ';
-      width: 1.3em;
-      height: 1.3em;
-      left: -0.5em;
-      top: 1.1em;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-image: url(src/team_title.png); }
+      width: 8em; } }
   .soft_open_part .soft_open_content {
     position: relative;
     padding: 1em 3em;
@@ -1813,8 +1797,7 @@ button {
     margin-right: 2%;
     padding: 0;
     width: 23%;
-    overflow: hidden;
-    height: 464px; }
+    overflow: hidden; }
     @media screen and (max-width: 768px) {
       .soft_open_part .soft_open_qi {
         width: 100%; } }
@@ -1829,13 +1812,15 @@ button {
     .soft_open_part .soft_open_qi ul {
       float: left;
       width: 100%;
-      overflow: hidden; }
+      overflow: hidden;
+      padding-top: 2em; }
       .soft_open_part .soft_open_qi ul li {
         width: 100%;
         float: left;
         overflow: hidden;
         position: relative;
-        padding-left: 5.5em; }
+        padding-left: 5.5em;
+        height: 7em; }
         .soft_open_part .soft_open_qi ul li span {
           float: left;
           width: 100%; }
@@ -1935,32 +1920,6 @@ button {
 .soft_about_title {
   width: 100%;
   padding-top: 4em; }
-  .soft_about_title dt {
-    display: block;
-    width: 4em;
-    font-size: 2em;
-    line-height: 2em;
-    position: relative;
-    margin: auto; }
-  .soft_about_title dt::before {
-    position: absolute;
-    display: block;
-    content: ' ';
-    width: 1.3em;
-    height: 1.3em;
-    left: -1.7em;
-    top: 0.2em;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url(src/team_title.png); }
-  .soft_about_title .soft_about_brief {
-    width: 100%;
-    overflow: hidden; }
-    .soft_about_title .soft_about_brief span {
-      float: left;
-      width: 100%;
-      text-align: center;
-      line-height: 1.5em; }
 
 .soft_about_content {
   width: 100%;
@@ -2033,6 +1992,19 @@ button {
       right: 1em;
       background-image: url(src/about_us5.png); }
 
+.soft_call_largest {
+  padding-top: 8em;
+  width: 100%; }
+  .soft_call_largest .soft_call_btn {
+    font-size: 1.2em;
+    width: 8em;
+    border-radius: 4px;
+    line-height: 2em;
+    color: #FFFFFF;
+    border: 1px solid #03203A;
+    margin-left: calc(50% - 4em);
+    background-color: #03203A; }
+
 .ad_max_div {
   width: 90%;
   margin: auto;
@@ -2042,19 +2014,9 @@ button {
     .ad_max_div {
       padding: 2em 1em; } }
 
-.ad_title {
-  font-size: 3em;
-  font-weight: normal;
-  display: block;
-  text-align: center; }
-
-.ad_title_span {
-  margin-top: 1em;
-  font-size: 1.5em;
-  display: block;
-  margin-bottom: 2em;
-  text-align: center;
-  color: #727171; }
+@media screen and (min-width: 768px) {
+  .soft_ad_title dt {
+    width: 7em; } }
 
 .ad_content_div1,
 .ad_content_div2,
@@ -2084,11 +2046,6 @@ button {
 @media screen and (max-width: 768px) {
   .ad_after_bg {
     display: none; } }
-.ad_content_div1.active,
-.ad_content_div2.active,
-.ad_content_div3.active {
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.6); }
-
 @media screen and (max-width: 768px) {
   .ad_content_div1,
   .ad_content_div2 {
@@ -2253,11 +2210,13 @@ button {
     font-size: 2em; }
 
 .soft_lb_div {
-  position: relative; }
+  position: relative;
+  padding-bottom: 2em; }
 
 .soft_bottom_leftdiv {
   position: relative;
-  border-right: 1px solid #03203A; }
+  border-right: 1px solid #03203A;
+  height: 630px; }
 
 .soft_bottom_leftdiv::before {
   position: absolute;
@@ -2281,10 +2240,6 @@ button {
 .carousel-inner
 .carousel-indicators .active {
   margin: 8px 10px; }
-
-.carousel-indicators {
-  width: 100%;
-  left: 0; }
 
 .carousel-indicators li {
   width: 16px;
@@ -2361,15 +2316,20 @@ button {
     color: #FFFFFF;
     padding: 0 1em;
     line-height: 1.5em; }
-  .soft_test_right a {
+  .soft_test_right button {
     float: left;
     color: #FFFFFF;
     width: 8em;
     border-radius: 4px;
     padding-left: 3em;
-    line-height: 2em;
     margin-top: 0.5em;
     background-color: #03203A; }
+
+.pmp_test_right button {
+  margin-top: 0.2em; }
+
+.pmp_test_right {
+  padding-left: 10%; }
 
 .soft_banner_div {
   width: 100%;
@@ -2434,5 +2394,15 @@ button {
 .soft_alert_submit {
   width: 100%;
   height: 100%; }
+
+.soft_none {
+  display: none; }
+
+.soft_indent {
+  text-indent: 2em;
+  line-height: 2em; }
+
+.btn-primary {
+  border-color: transparent; }
 
 /*# sourceMappingURL=main.css.map */

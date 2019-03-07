@@ -172,13 +172,13 @@
 //活动新闻区域
 .soft_act_new {
     width: 100%;
-    padding: 0 0 0 6%;
+    padding: 6em 0 0 6%;
     position: relative;
     z-index: 1;
     height: initial;
     .soft_act_title {
-        padding: 0 4%;
-        height: 4em;
+        padding-bottom: 4em;
+        height: 12em;
         span {
             position: relative;
             float: left;
@@ -187,8 +187,7 @@
             color: #821C21cc;
             background-color: rgba(238, 238, 238, 0.85);
             text-align: center;
-            line-height: 3em;
-            margin-top: -2em; // box-shadow: 0 0 2px #000;  
+            line-height: 3em; // box-shadow: 0 0 2px #000;  
             @media screen and (max-width: 768px) {
                 font-size: 1.2em;
                 line-height: 3em;
@@ -243,18 +242,17 @@
 .soft_act_content {
     float: right;
     width: 100%;
-    height: 516px;
+    height: 580px;
     position: relative;
+    box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18);
 }
 
 .soft_act_content1 {
-    box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18);
     padding-bottom: 2em;
 }
 
 .soft_act_content3 {
     background-color: #ffffff;
-    box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18);
 }
 
 .soft_act_content2,
@@ -262,7 +260,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    padding: 7% 0% 2% 0%;
+    padding: 5% 0% 2% 0%;
 }
 
 .soft_act_content1,
@@ -293,6 +291,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    padding-left: 10%;
     li {
         float: left;
         width: 70%;
@@ -300,41 +299,36 @@
         font-size: 2em;
         text-align: center;
         opacity: 0.8;
-        color: #ffffff;
         line-height: 105px;
+        padding-left: 3em;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
     }
     ul {
         float: left;
-        padding-left: 5%;
-        width: 50%;
     }
     .soft_act1_ul1 {
         overflow: hidden;
+        padding-top: 2em;
+        padding-bottom: 1em;
         li:first-child {
-            background-color: #1945ef;
             margin-bottom: 30px;
         }
         li:nth-of-type(2) {
-            background-color: #fe6021;
             margin-bottom: 40px;
         }
-        li:nth-of-type(3) {
-            background-color: #906aff;
-        }
+        li:nth-of-type(3) {}
     }
     .soft_act1_ul2 {
         overflow: hidden;
+        padding-top: 2em;
+        padding-bottom: 1em;
         li:first-child {
-            background-color: #3ec7f7;
             margin-bottom: 30px;
         }
         li:nth-of-type(2) {
-            background-color: #fbbc3f;
             margin-bottom: 40px;
         }
-        li:nth-of-type(3) {
-            background-color: #fe6021;
-        }
+        li:nth-of-type(3) {}
     }
     li.active {
         width: 407px;
@@ -403,10 +397,9 @@
 
 .soft_act_content1 {
     overflow: hidden;
-    padding-top: 7%;
+    padding-top: 5%;
     ul {
         float: left;
-        width: 30%;
         overflow: hidden;
         border-right: 1px dotted $active_border_color;
         padding-top: 2em;
@@ -435,25 +428,6 @@
 
 // 考试信息区域
 .soft_act_content2 {}
-
-.soft_test_info {
-    width: 100%;
-    .soft_info_title {
-        width: 100%;
-        padding-bottom: 2em;
-        span {
-            display: block;
-            border-radius: 2px;
-            width: 10em;
-            line-height: 2em;
-            font-size: 1.2em;
-            text-align: center;
-            margin: auto;
-            color: $primary-color-text;
-            background-color: $title-bg-color;
-        }
-    }
-}
 
 .soft_info_content {
     overflow: hidden;
@@ -504,9 +478,22 @@
     border-right: 1em solid transparent;
 }
 
+.soft_info_content {
+    overflow: hidden;
+}
+
 .soft_info_left,
 .soft_info_right {
+    float: left;
     padding: 0;
+}
+
+.soft_info_left {
+    width: 60%;
+}
+
+.soft_info_right {
+    width: 40%;
 }
 
 .soft_info_part1,
@@ -602,22 +589,54 @@
         position: relative;
         font-weight: normal;
     }
-    @media screen and (min-width:768px) {
+}
+
+// 二级标题
+.soft_two_big {
+    height: 4em;
+}
+
+// 标题描述
+.soft_title_notes {
+    width: 100%;
+    padding: 2em 0;
+    span {
+        display: block;
+        width: 100%;
+        font-size: 1.2em;
+        line-height: 2em;
+        text-align: center;
+    }
+}
+
+.soft_two_title {
+    .soft_two_content {
+        width: 100%;
         dt {
-            width: 15em;
+            display: block;
+            font-size: 1.5em;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            width: 5em;
+        }
+        dt:before {
+            content: ' ';
+            display: block;
+            width: 2em;
+            position: absolute;
+            height: 2em;
+            left: -2em;
+            top: -0.7em;
+            background-image: url(src/team_title.png);
+            background-repeat: no-repeat;
+            background-size: contain;
         }
     }
-    dt::before {
-        position: absolute;
-        display: block;
-        content: ' ';
-        width: 1.3em;
-        height: 1.3em;
-        left: -0.6em;
-        top: 0em;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(src/team_title.png);
+    .soft_two_content2 {
+        dt {
+            width: 9em;
+        }
     }
 }
 
@@ -707,6 +726,7 @@
                     color: $primary-color;
                     background-color: $bgc-light;
                     padding-left: 8em;
+                    height: 140px;
                     span {
                         float: left;
                         width: 100%;
@@ -715,8 +735,11 @@
                     span:first-child {
                         font-size: 1.2em;
                     }
-                    span:nth-of-type(2) {
+                    span:nth-of-type(2),
+                    span:nth-of-type(3) {
                         font-size: 1.5em;
+                        height: 1.5em;
+                        line-height: 1.5em;
                     }
                 }
                 li::before {
@@ -771,7 +794,7 @@
 }
 
 .soft_lesson_content {
-    height: 372px;
+    height: 420px;
     width: 100%;
     background-position-y: 0.7em;
     border-top: 1px solid $lesson_border_color;
@@ -780,7 +803,7 @@
 
 .soft_lesson_top {
     width: 100%;
-    height: 182px;
+    height: 210px;
     padding: 3em 5%;
     overflow: hidden;
     span {
@@ -802,7 +825,7 @@
 
 .soft_lesson_bg {
     width: 100%;
-    height: 190px;
+    height: 210px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: 40%;
@@ -838,6 +861,14 @@
         margin: auto;
         margin-top: -1em;
         background-color: #fff;
+    }
+}
+
+.soft_team_title {
+    @media screen and (min-width: 768px) {
+        dt {
+            width: 6em;
+        }
     }
 }
 
@@ -921,113 +952,166 @@
     left: calc(50% - 3.5em);
 }
 
+// 软考项目管理专业学习难点区域
+.pmp_lesson_title {
+    .soft_team_title {
+        @media screen and (min-width: 768px) {
+            dt {
+                width: 8em;
+            }
+        }
+    }
+}
+
+.pmp_team_title {
+    .soft_team_title {
+        @media screen and (min-width: 768px) {
+            dt {
+                width: 6em;
+            }
+        }
+    }
+}
+
+.soft_class_way {
+    @media screen and (min-width: 768px) {
+        dt {
+            width: 6em;
+        }
+    }
+}
+
+.soft_titile_box {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
 .soft_team_content {
     overflow: hidden;
     position: relative;
-    height: 900px;
+    height: 450px;
     width: 100%;
-    .soft_team_item {
-        margin-right: 2em;
-        float: left;
-        width: 30%;
-        border-radius: 4px;
-        position: relative;
-    }
-    .soft_team_item {
-        position: absolute;
-    }
-    .soft_team_item:first-child {
-        left: 2%;
-        top: 0;
-    }
-    .soft_team_item:nth-of-type(2) {
-        left: 35%;
-        top: 0;
-    }
-    .soft_team_item:nth-of-type(3) {
-        left: 68%;
-        top: 0;
-    }
-    .soft_team_item:nth-of-type(4) {
-        left: 2%;
-        top: 30em;
-    }
-    .soft_team_item:nth-of-type(5) {
-        left: 35%;
-        top: 30em;
-    }
-    .soft_team_item:nth-of-type(6) {
-        left: 68%;
-        top: 30em;
-    }
-    .soft_team_middle {
-        background-color: $bgc-light;
-        color: #08345a;
-        font-size: 1.2em;
+}
+
+.soft_team_item {
+    float: left;
+    width: 22%;
+    border-radius: 4px;
+    position: relative;
+}
+
+.soft_team_item {
+    position: absolute;
+}
+
+.soft_team_middle {
+    background-color: $bgc-light;
+    color: #08345a;
+    font-size: 1.2em;
+    width: 100%;
+    height: 9em;
+    padding-top: 6em;
+    margin-top: 4em;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    span {
         width: 100%;
-        height: 9em;
-        padding-top: 6em;
-        margin-top: 4em;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        span {
-            width: 100%;
-            line-height: 2em;
-            text-align: center;
-            display: block;
-        }
+        line-height: 2em;
+        text-align: center;
+        display: block;
     }
+}
+
+.soft_team_top {
+    position: relative;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    padding-top: 1em;
+    span {
+        display: block;
+        width: 8em;
+        height: 8em;
+        border-radius: 50%;
+        margin: auto;
+        background-repeat: no-repeat;
+        border: 2px solid #fff;
+        background-size: cover;
+        margin-top: 2em;
+    }
+}
+
+.soft_team_item:first-child {
+    left: 2%;
+    top: 0;
     .soft_team_top {
-        position: relative;
-        width: 100%;
-        height: 0;
-        top: 0;
-        left: 0;
-        padding-top: 1em;
         span {
-            display: block;
-            width: 8em;
-            height: 8em;
-            border-radius: 50%;
-            margin: auto;
-            background-image: url(src/team_logo1.png);
-            background-repeat: no-repeat;
-            border: 2px solid #fff;
-            background-size: contain;
-            margin-top: 2em;
+            background-image: url(src/liupeichun.jpg);
         }
     }
-    .soft_team_item.active {
-        .soft_team_middle {
-            height: 13em;
-            padding-top: 10em;
-            margin-top: 0;
-            color: #fff;
-            background-color: #08345a;
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
-        }
-        .soft_team_top {
-            span {
-                width: 9em;
-                height: 9em;
-            }
-        }
-        .soft_team_bottom {
-            box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+.soft_team_item:nth-of-type(2) {
+    left: 26%;
+    top: 0;
+    .soft_team_top {
+        span {
+            background-image: url(src/liufang.jpg);
         }
     }
-    .soft_team_bottom {
-        width: 100%;
-        padding-top: 4em;
-        overflow: hidden;
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
+}
+
+.soft_team_item:nth-of-type(3) {
+    left: 50%;
+    top: 0;
+    .soft_team_top {
         span {
-            float: left;
-            width: 100%;
-            line-height: 2em;
-            text-align: center;
+            background-image: url(src/songdan.jpg);
         }
+    }
+}
+
+.soft_team_item:nth-of-type(4) {
+    left: 74%;
+    top: 0;
+    .soft_team_top {
+        span {
+            background-image: url(src/wangqifu.jpg);
+        }
+    }
+}
+
+// .soft_team_item.active {
+//     .soft_team_middle {
+//         height: 13em;
+//         padding-top: 10em;
+//         margin-top: 0;
+//         color: #fff;
+//         background-color: #08345a;
+//         box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+//     }
+//     .soft_team_top {
+//         span {
+//             width: 9em;
+//             height: 9em;
+//         }
+//     }
+//     .soft_team_bottom {
+//         box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+//     }
+// }
+.soft_team_bottom {
+    width: 100%;
+    padding-top: 4em;
+    overflow: hidden;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    span {
+        float: left;
+        width: 100%;
+        line-height: 2em;
+        text-align: center;
     }
 }
 
@@ -1048,44 +1132,20 @@
 .soft_trade_top {
     position: relative;
     z-index: 1;
-}
-
-.soft_trade_hdiv {
-    color: #000;
     padding-top: 6em;
-    padding-bottom: 2em;
-    dt {
-        position: relative;
-        display: block;
-        font-size: 2em;
-        width: 8em;
-        text-align: center;
-        height: 1.5em;
-        margin: auto;
-    }
-    dt::before {
-        position: absolute;
-        display: block;
-        content: ' ';
-        width: 1.3em;
-        height: 1.3em;
-        left: 0.2em;
-        top: -0.1em;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(src/team_title.png);
-    }
-    span {
-        display: block;
-        line-height: 2em;
-        text-align: center;
-        margin: auto;
-    }
 }
 
 // 制定服务区域
 .soft_server {
     padding-top: 4em;
+}
+
+.soft_serve_title {
+    @media screen and (min-width: 768px) {
+        dt {
+            width: 10em;
+        }
+    }
 }
 
 .soft_srver_row1 {
@@ -1132,37 +1192,17 @@
 }
 
 // 开班计划区域
-.soft_open_row {
-    padding-top: 4em;
-}
+.soft_open_row {}
 
 .soft_open_part {
     padding-left: 3em;
     padding-top: 5em;
     overflow: hidden;
     .soft_open_title {
-        font-weight: normal;
-        width: 100%;
-        float: left;
-        dt {
-            font-size: 2em;
-            width: 9em;
-            text-align: center;
-            margin: auto;
-            line-height: 4em;
-            position: relative;
-        }
-        dt::before {
-            position: absolute;
-            display: block;
-            content: ' ';
-            width: 1.3em;
-            height: 1.3em;
-            left: -0.5em;
-            top: 1.1em;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-image: url(src/team_title.png);
+        @media screen and (min-width: 768px) {
+            dt {
+                width: 8em;
+            }
         }
     }
     .soft_open_content {
@@ -1179,7 +1219,6 @@
         padding: 0;
         width: 23%;
         overflow: hidden;
-        height: 464px;
         @media screen and (max-width: 768px) {
             width: 100%;
         }
@@ -1196,12 +1235,14 @@
             float: left;
             width: 100%;
             overflow: hidden;
+            padding-top: 2em;
             li {
                 width: 100%;
                 float: left;
                 overflow: hidden;
                 position: relative;
                 padding-left: 5.5em;
+                height: 7em;
                 span {
                     float: left;
                     width: 100%;
@@ -1334,36 +1375,6 @@
 .soft_about_title {
     width: 100%;
     padding-top: 4em;
-    dt {
-        display: block;
-        width: 4em;
-        font-size: 2em;
-        line-height: 2em;
-        position: relative;
-        margin: auto;
-    }
-    dt::before {
-        position: absolute;
-        display: block;
-        content: ' ';
-        width: 1.3em;
-        height: 1.3em;
-        left: -1.7em;
-        top: 0.2em;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(src/team_title.png);
-    }
-    .soft_about_brief {
-        width: 100%;
-        overflow: hidden;
-        span {
-            float: left;
-            width: 100%;
-            text-align: center;
-            line-height: 1.5em;
-        }
-    }
 }
 
 .soft_about_content {
@@ -1449,6 +1460,22 @@
     }
 }
 
+// 方案咨询区域
+.soft_call_largest {
+    padding-top: 8em;
+    width: 100%;
+    .soft_call_btn {
+        font-size: 1.2em;
+        width: 8em;
+        border-radius: 4px;
+        line-height: 2em;
+        color: #FFFFFF;
+        border: 1px solid #03203A;
+        margin-left: calc(50% - 4em);
+        background-color: #03203A;
+    }
+}
+
 // 优势区域
 .ad_max_div {
     width: 90%;
@@ -1460,20 +1487,12 @@
     }
 }
 
-.ad_title {
-    font-size: 3em;
-    font-weight: normal;
-    display: block;
-    text-align: center;
-}
-
-.ad_title_span {
-    margin-top: 1em;
-    font-size: 1.5em;
-    display: block;
-    margin-bottom: 2em;
-    text-align: center;
-    color: #727171;
+.soft_ad_title {
+    @media screen and (min-width: 768px) {
+        dt {
+            width: 7em;
+        }
+    }
 }
 
 .ad_content_div1,
@@ -1512,12 +1531,6 @@
 
 .ad_content_div1::after,
 .ad_content_div2::after {}
-
-.ad_content_div1.active,
-.ad_content_div2.active,
-.ad_content_div3.active {
-    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.6);
-}
 
 .ad_content_div1,
 .ad_content_div2 {
@@ -1714,11 +1727,13 @@
 
 .soft_lb_div {
     position: relative;
+    padding-bottom: 2em;
 }
 
 .soft_bottom_leftdiv {
     position: relative;
     border-right: 1px solid $primary-deep-color;
+    height: 630px;
 }
 
 .soft_bottom_leftdiv::before {
@@ -1745,11 +1760,6 @@
 .carousel-inner // 有序li状态
 .carousel-indicators .active {
     margin: 8px 10px;
-}
-
-.carousel-indicators {
-    width: 100%;
-    left: 0;
 }
 
 .carousel-indicators li {
@@ -1842,16 +1852,26 @@
         padding: 0 1em;
         line-height: 1.5em;
     }
-    a {
+    button {
         float: left;
         color: $primary-color-text;
         width: 8em;
         border-radius: 4px;
         padding-left: 3em;
-        line-height: 2em;
         margin-top: 0.5em;
         background-color: $primary-deep-color;
     }
+}
+
+.pmp_test_right {
+    button {
+        margin-top: 0.2em;
+    }
+}
+
+// pmp模拟测试
+.pmp_test_right {
+    padding-left: 10%;
 }
 
 .soft_banner_div {
@@ -1941,4 +1961,18 @@
 .soft_alert_submit {
     width: 100%;
     height: 100%;
+}
+
+.soft_none {
+    display: none;
+}
+
+.soft_indent {
+    text-indent: 2em;
+    line-height: 2em;
+}
+
+// 模拟测试按钮
+.btn-primary {
+    border-color: transparent;
 }
