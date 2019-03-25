@@ -25,6 +25,12 @@
     top: 0;
 }
 
+.soft_banner_title {
+    @media screen and(max-width: 768px) {
+        margin-top: 2em;
+    }
+}
+
 // logo和联系电话区域
 .soft_title {
     padding: 1em 2em 1em 6em;
@@ -35,11 +41,39 @@
     .soft_left {
         float: left;
         font-weight: bold;
-        width: 20%;
+        span:first-child {
+            padding-right: 0.2em;
+            padding-top: 0.1em;
+            @media screen and (max-width: 768px) {
+                padding-top: 0.3em;
+            }
+            img {
+                display: block;
+                width: 1.2em;
+            }
+        }
     }
     .soft_right {
-        width: 15em;
         float: right;
+        span {
+            font-size: 20px;
+        }
+        .soft_call_div {
+            float: right;
+        }
+        span:first-child {
+            padding-top: 0.1em;
+            padding-right: 1em;
+            img {
+                display: block;
+                width: 1.2em;
+                height: auto;
+            }
+        }
+        .soft_left,
+        .soft_right {
+            padding: 0;
+        }
     }
     span {
         float: left;
@@ -58,7 +92,7 @@
     background-color: $primary-color;
     color: $primary-color-text;
     position: fixed;
-    z-index: 2;
+    z-index: 24;
     @media screen and (max-width: 768px) {
         padding: 0;
     }
@@ -90,6 +124,9 @@
 .soft_top_tab.active {
     height: 104px;
     top: 0;
+    @media screen and (max-width: 768px) {
+        height: auto;
+    }
     ul {
         display: block;
         li.acitve {
@@ -102,10 +139,13 @@
     overflow: hidden;
     li {
         float: left;
-        width: 15%;
         text-align: center;
         height: 2.9em;
         border-top: 3px solid $primary-color;
+        @media screen and (max-width: 768px) {
+            height: auto;
+            padding: 0;
+        }
     }
     li.active {
         border-top-color: $active_border-color;
@@ -124,6 +164,11 @@
     background-position: center 0;
     background-repeat: no-repeat;
     padding: 100px 0;
+    @media screen and (max-width: 768px) {
+        background-size: 1920px 430px;
+        height: 420px;
+        padding: 30px 0;
+    }
     .soft_banner_img {
         width: 100%;
         img {
@@ -154,6 +199,9 @@
                 float: left;
                 padding-bottom: 2em;
                 width: 33%;
+                @media screen and (max-width: 768px) {
+                    width: 50%;
+                }
                 span {
                     display: block;
                     text-align: center;
@@ -204,9 +252,15 @@
     position: relative;
     z-index: 1;
     height: initial;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
     .soft_act_title {
         padding-bottom: 4em;
-        height: 12em;
+        height: 8em;
+        @media screen and (max-width: 768px) {
+            height: 5em;
+        }
         span {
             position: relative;
             float: left;
@@ -289,6 +343,16 @@
     height: 100%;
     overflow: hidden;
     padding: 5% 0% 2% 0%;
+    @media screen and (max-width: 768px) {
+        overflow: scroll;
+        padding: 0;
+    }
+}
+
+.soft_act_content3 {
+    @media screen and (max-width: 768px) {
+        padding-top: 3em;
+    }
 }
 
 .soft_act_content1,
@@ -319,17 +383,35 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    padding-left: 10%;
+    padding-left: 6%;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
     li {
         float: left;
-        width: 70%;
+        padding: 1em;
+        width: 90%;
         height: 105px;
-        font-size: 2em;
         text-align: center;
         opacity: 0.8;
-        line-height: 105px;
-        padding-left: 3em;
-        box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 0;
+            height: auto;
+        }
+        dt {
+            display: block;
+            width: 100%;
+            font-size: 1.2em;
+            line-height: 1.5em;
+            text-align: left;
+            padding-bottom: 0.2em;
+        }
+        p {
+            display: block;
+            text-align: left;
+            width: 100%;
+        }
     }
     ul {
         float: left;
@@ -371,10 +453,13 @@
     overflow: hidden;
     padding-top: 2em;
     padding-bottom: 3em;
+    @media screen and (max-width: 768px) {
+        padding-top: 2em;
+        padding-bottom: 0;
+    }
     span {
         float: left;
         width: 33%;
-        padding-left: 10%;
         text-align: left;
         line-height: 2em;
         @media screen and (max-width: 768px) {
@@ -382,44 +467,40 @@
             margin-bottom: 1em;
         }
     }
-    button {
-        background-color: $third-color;
+    button,
+    a.button {
+        background-color: #347dbb;
         color: $primary-color-text;
         line-height: 2em;
-        width: 10em;
         border-radius: 2px;
         float: left;
         padding-left: 2em;
         position: relative;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            width: 10em;
+        }
     }
-    button::before {
+    button::before,
+    a.button::before {
         content: ' ';
         position: absolute;
-        left: 1.2em;
+        left: 0.3em;
         top: 0.3em;
         display: block;
-        width: 2em;
+        width: 1.5em;
         height: 1.5em;
         background-repeat: no-repeat;
         background-size: contain;
     }
-    span:first-child {
-        button::before {
-            background-image: url(src/feiyong.png);
-        }
+    span:first-child a.button::before {
+        background-image: url(src/feiyong.png);
     }
-    span:nth-of-type(2) {
-        button::before {
-            background-image: url(src/passnum.png);
-        }
+    span:nth-of-type(2) a.button::before {
+        background-image: url(src/passnum.png);
     }
-    span:nth-of-type(3) {
-        button::before {
-            background-image: url(src/enlist.png);
-        }
-    }
-    button:first-child::before {
-        background-image: url(src/button_logo.png);
+    span:nth-of-type(3) a.button::before {
+        background-image: url(src/enlist.png);
     }
 }
 
@@ -431,11 +512,17 @@
         overflow: hidden;
         border-right: 1px dotted $active_border_color;
         padding-top: 2em;
+        @media screen and (max-width: 768px) {
+            padding-top: 0;
+        }
         li {
             float: left;
             width: 100%;
             padding-left: 20%;
             padding-bottom: 2em;
+            @media screen and (max-width: 768px) {
+                padding: 0;
+            }
             span {
                 float: left;
                 width: 100%;
@@ -455,7 +542,9 @@
 }
 
 // 考试信息区域
-.soft_act_content2 {}
+.soft_act_content2 {
+    padding-top: 2em;
+}
 
 .soft_info_content {
     overflow: hidden;
@@ -728,6 +817,9 @@
 // 课程方案区域
 .soft_lesson_part {
     padding: 3em 0;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
 }
 
 .none {
@@ -821,6 +913,7 @@
     }
 }
 
+// 课程方案右侧
 .soft_lesson_content {
     height: 420px;
     width: 100%;
@@ -832,22 +925,50 @@
 .soft_lesson_top {
     width: 100%;
     height: 210px;
-    padding: 3em 5%;
+    padding: 0em 5%;
     overflow: hidden;
     span {
         float: left;
         font-size: 1.2em;
         line-height: 2em;
         text-align: center;
+        position: relative;
+        font-weight: bold;
+    }
+    span::before {
+        content: ' ';
+        display: block;
+        width: 4em;
+        height: 4em;
+        position: absolute;
+        left: calc(50% - 2em);
+        top: 1em;
+        background-image: url(src/yun.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media screen and (max-width: 768px) {
+            top: 0.5em;
+        }
+    }
+    span:nth-child(2)::before,
+    span:nth-child(3)::before {
+        @media screen and (max-width: 768px) {
+            top: 2.5em;
+        }
     }
     span:first-child {
         width: 100%;
+        color: #08345a;
+        margin-top: 2em;
+        margin-bottom: 3em;
     }
     span:nth-of-type(2) {
         width: 50%;
+        color: #08345a;
     }
     span:nth-of-type(3) {
         width: 50%;
+        color: #821c21;
     }
 }
 
@@ -874,6 +995,9 @@
 // 团队6栏
 .soft_team_part {
     padding-top: 7em;
+    @media screen and (max-width: 768px) {
+        padding-top: 3em;
+    }
 }
 
 // 课程方案与师资团队共同title样式
@@ -889,6 +1013,10 @@
         margin: auto;
         margin-top: -1em;
         background-color: #fff;
+        @media screen and (max-width: 768px) {
+            font-size: 1.5em;
+            width: 7em;
+        }
     }
 }
 
@@ -922,6 +1050,9 @@
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     position: relative;
+    @media screen and (max-width: 768px) {
+        width: 70%;
+    }
     span {
         position: relative;
     }
@@ -949,6 +1080,9 @@
         border-left: 21px solid #ccc;
         border-right: 21px solid transparent;
         border-bottom: 21px solid transparent;
+        @media screen and (max-width: 768px) {
+            margin-top: -22px;
+        }
     }
     span:first-child::before {
         border-top: 20px solid transparent;
@@ -982,12 +1116,8 @@
 
 // 软考项目管理专业学习难点区域
 .pmp_lesson_title {
-    .soft_team_title {
-        @media screen and (min-width: 768px) {
-            dt {
-                width: 8em;
-            }
-        }
+    dt {
+        width: 7em;
     }
 }
 
@@ -1012,24 +1142,21 @@
 .soft_titile_box {
     padding-top: 2em;
     padding-bottom: 1em;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
 }
 
 .soft_team_content {
     overflow: hidden;
     position: relative;
-    height: 450px;
     width: 100%;
 }
 
 .soft_team_item {
     float: left;
-    width: 22%;
     border-radius: 4px;
     position: relative;
-}
-
-.soft_team_item {
-    position: absolute;
 }
 
 .soft_team_middle {
@@ -1070,42 +1197,33 @@
     }
 }
 
-.soft_team_item:first-child {
-    left: 2%;
-    top: 0;
-    .soft_team_top {
-        span {
-            background-image: url(src/liupeichun.jpg);
+.soft_item_row:first-child {
+    .soft_team_item:first-child {
+        .soft_team_top {
+            span {
+                background-image: url(src/liupeichun.jpg);
+            }
         }
     }
-}
-
-.soft_team_item:nth-of-type(2) {
-    left: 26%;
-    top: 0;
-    .soft_team_top {
-        span {
-            background-image: url(src/liufang.jpg);
+    .soft_team_item:nth-of-type(2) {
+        .soft_team_top {
+            span {
+                background-image: url(src/wangqifu.jpg);
+            }
         }
     }
-}
-
-.soft_team_item:nth-of-type(3) {
-    left: 50%;
-    top: 0;
-    .soft_team_top {
-        span {
-            background-image: url(src/songdan.jpg);
+    .soft_team_item:nth-of-type(3) {
+        .soft_team_top {
+            span {
+                background-image: url(src/wanghaoxue.jpg);
+            }
         }
     }
-}
-
-.soft_team_item:nth-of-type(4) {
-    left: 74%;
-    top: 0;
-    .soft_team_top {
-        span {
-            background-image: url(src/wangqifu.jpg);
+    .soft_team_item:nth-of-type(4) {
+        .soft_team_top {
+            span {
+                background-image: url(src/wangli.jpg);
+            }
         }
     }
 }
@@ -1146,7 +1264,6 @@
 // 行业内训区域
 .soft_largest_box8 {
     background-color: #347dbb;
-    background-color: #347dbb;
     background-image: url(src/chanp_1.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1154,6 +1271,9 @@
     .row {
         padding-top: 225px;
         padding-bottom: 225px;
+        @media screen and (max-width: 768px) {
+            padding: 70px 0;
+        }
     }
 }
 
@@ -1178,6 +1298,10 @@
 
 .soft_srver_row1 {
     padding-top: 6em;
+    padding-bottom: 2em;
+    @media screen and (max-width: 768px) {
+        padding-top: 2em;
+    }
 }
 
 .soft_server_bg {
@@ -1193,17 +1317,33 @@
 
 .soft_server_logo {
     padding-top: 4em;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
     img {
         display: block;
-        width: 6em;
-        height: 6em;
+        width: 8em;
         margin: auto;
+        @media screen and (max-width: 768px) {
+            width: auto;
+            height: 8em;
+        }
+    }
+}
+
+.screen_xs {
+    @media screen and (max-width: 768px) {
+        margin-bottom: 4em;
     }
 }
 
 .soft_server_text {
-    padding-top: 2em;
+    padding-top: 1em;
     width: 100%;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+        padding-bottom: 1em;
+    }
     dt {
         font-weight: normal;
         font-size: 1.2em;
@@ -1225,7 +1365,9 @@
 .soft_open_part {
     padding-left: 3em;
     padding-top: 5em;
-    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
     .soft_open_title {
         @media screen and (min-width: 768px) {
             dt {
@@ -1233,13 +1375,66 @@
             }
         }
     }
+    .soft_open_topbox {
+        padding-bottom: 1em;
+    }
     .soft_open_content {
         position: relative;
-        padding: 1em 3em;
         margin-right: 3em;
         width: 98%;
         float: left;
+        padding-left: 2em;
+        padding-top: 1em;
         border-top: 3px solid $open_border_color;
+    }
+    .soft_open_describe {
+        .soft_content1 {
+            width: 100%;
+            background-color: $background-color;
+            height: 6em;
+            overflow: hidden;
+            padding-top: 0.5em;
+            span {
+                float: left;
+                width: 100%;
+                color: #821C21;
+                text-align: center;
+                line-height: 2;
+            }
+            span:first-child {
+                font-size: 1.5em;
+            }
+            span:nth-of-type(2) {
+                font-size: 1em;
+            }
+        }
+    }
+    .soft_open_info {
+        height: 4em;
+        padding: 1em 1em 0 1em;
+        span {
+            display: block;
+            position: relative;
+            width: 100%;
+            text-align: left;
+            font-size: 1.2em;
+            font-weight: bold;
+            line-height: 3em;
+            padding-left: 2.2em;
+            border-bottom: 2px solid $bgc-light;
+        }
+        span:before {
+            content: ' ';
+            position: absolute;
+            background-image: url(src/open_icon1.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+            width: 1.5em;
+            height: 1.5em;
+            left: 0em;
+            top: 0.8em;
+        }
     }
     .soft_open_qi {
         float: left;
@@ -1247,6 +1442,7 @@
         padding: 0;
         width: 23%;
         overflow: hidden;
+        margin-bottom: 1em;
         @media screen and (max-width: 768px) {
             width: 100%;
         }
@@ -1296,19 +1492,13 @@
                 color: $primary-color;
                 background-repeat: no-repeat;
             }
-            li.active::before {
-                color: $primary-text-color;
-            }
             li:first-child::before {
-                background-image: url(src/open_icon1.png);
-            }
-            li:nth-of-type(2)::before {
                 background-image: url(src/open_icon2.png);
             }
-            li:nth-of-type(3)::before {
+            li:nth-of-type(2)::before {
                 background-image: url(src/open_icon3.png);
             }
-            li:last-child::before {
+            li:nth-of-type(3)::before {
                 background-image: url(src/open_icon4.png);
             }
         }
@@ -1340,10 +1530,13 @@
             button {
                 display: block;
                 width: 8em;
-                background-color: $primary-deep-color;
-                color: $primary-color-text;
+                background-color: #347dbb;
+                color: #fff;
                 border-radius: 2px;
                 margin: auto;
+            }
+            button:hover {
+                border-color: #347dbb;
             }
         }
     }
@@ -1357,19 +1550,24 @@
     .soft_open_qi.active {
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
         dt {
-            background-color: $primary-text-color;
+            background-color: #347dbb;
+        }
+        .soft_content1 span {
+            color: #347dbb;
+        }
+        .soft_open_info {
+            span::before {
+                background-image: url(src/open_icon5.png);
+            }
         }
         ul {
             li:first-child::before {
-                background-image: url(src/open_icon5.png);
-            }
-            li:nth-of-type(2)::before {
                 background-image: url(src/open_icon6.png);
             }
-            li:nth-of-type(3)::before {
+            li:nth-of-type(2)::before {
                 background-image: url(src/open_icon7.png);
             }
-            li:last-child::before {
+            li:nth-of-type(3)::before {
                 background-image: url(src/open_icon8.png);
             }
         }
@@ -1379,16 +1577,16 @@
         width: 1em;
         height: 1em;
         position: absolute;
-        left: 0;
-        background-color: $open_border_color;
+        left: 2em;
+        background-color: #08345a;
         top: -2em;
     }
     .soft_open_content::after {
         content: ' ';
         width: 3px;
-        height: 37em;
+        height: 100%;
         position: absolute;
-        left: 2em;
+        left: 1em;
         background-color: $open_border_color;
         top: -2em;
     }
@@ -1490,28 +1688,30 @@
 
 // 方案咨询区域
 .soft_call_largest {
-    padding-top: 8em;
+    padding-top: 6em;
     width: 100%;
     .soft_call_btn {
+        display: block;
         font-size: 1.2em;
         width: 8em;
+        text-align: center;
         border-radius: 4px;
         line-height: 2em;
         color: #FFFFFF;
-        border: 1px solid #03203A;
+        border: 1px solid #347dbb;
         margin-left: calc(50% - 4em);
-        background-color: #03203A;
+        background-color: #347dbb;
     }
 }
 
 // 优势区域
 .ad_max_div {
-    width: 90%;
+    width: 100%;
     margin: auto;
     padding: 6em 2em 2em 2em;
     overflow: hidden;
     @media screen and (max-width: 768px) {
-        padding: 2em 1em;
+        padding: 2em 0em;
     }
 }
 
@@ -1529,6 +1729,9 @@
     float: left;
     width: 100%;
     padding: 4em 0;
+    @media screen and (max-width: 768px) {
+        padding: 1em 0em;
+    }
 }
 
 .ad_after_bg {
@@ -1572,7 +1775,6 @@
 .ad_img2,
 .ad_img3 {
     width: 100%;
-    height: 8em;
     img {
         display: block;
         width: 6.5em;
@@ -1673,12 +1875,12 @@
     .ad_big_font1,
     .ad_big_font2,
     .ad_big_font3 {
-        text-align: left;
+        text-align: center;
     }
     .ad_suggest1,
     .ad_suggest2,
     .ad_suggest3 {
-        text-align: left;
+        text-align: center;
     }
     .ad_ul1,
     .ad_ul2,
@@ -1693,9 +1895,16 @@
     }
 }
 
+// 底边三栏bootstrap:col-4
+.soft_col4 {
+    overflow: hidden;
+}
+
 .ad_ul_div {
     padding-top: 5em;
-    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        padding-top: 0;
+    }
 }
 
 // 底部轮播图盒子
@@ -1707,6 +1916,9 @@
     .item {
         width: 100%;
         height: 45em;
+        @media screen and (max-width: 768px) {
+            height: auto;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -1734,14 +1946,14 @@
         }
         li:first-child {
             padding-bottom: 1.5em;
-        }
-        li:nth-of-type(2) {
-            font-size: 2em;
+            @media screen and (max-width: 768px) {
+                padding: 0;
+            }
         }
         li img {
             width: 100%;
         }
-        li:nth-of-type(4) {
+        li:nth-of-type(2) {
             font-size: 1.5em;
             font-weight: bold;
             line-height: 2em;
@@ -1753,15 +1965,28 @@
     }
 }
 
+// 获取验证码框框
+.soft_get_code {
+    cursor: pointer;
+}
+
 .soft_lb_div {
     position: relative;
     padding-bottom: 2em;
+    @media screen and (max-width: 768px) {
+        padding-bottom: 1em;
+    }
 }
 
 .soft_bottom_leftdiv {
     position: relative;
     border-right: 1px solid $primary-deep-color;
     height: 630px;
+    @media screen and (max-width: 768px) {
+        border: none;
+        height: auto;
+        padding-bottom: 1em;
+    }
 }
 
 .soft_bottom_leftdiv::before {
@@ -1772,6 +1997,9 @@
     right: -0.5em;
     top: calc(50% - 0.5em);
     background-color: #fff;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .soft_bottom_leftdiv::after {
@@ -1783,6 +2011,9 @@
     right: -0.35em;
     top: calc(50% - 0.3em);
     background-color: $primary-deep-color;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .carousel-inner // 有序li状态
@@ -1808,6 +2039,9 @@
     margin-top: 14em;
     position: absolute;
     z-index: 10;
+    @media screen and (max-width: 768px) {
+        margin-top: 6em;
+    }
 }
 
 .carousel-control.left,
@@ -1819,7 +2053,7 @@
 .carousel-control.right::before {
     font-size: 2em;
     font-family: 'Glyphicons Halflings';
-    color: #232323;
+    color: #fff;
     display: block;
 }
 
@@ -1851,55 +2085,64 @@
 
 .soft_test_content {
     margin: auto;
-    width: 60%;
     overflow: hidden;
     height: 5em;
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding-bottom: 2em;
+    }
 }
 
 .soft_test_left {
     float: left;
-    width: 20%;
     overflow: hidden;
     img {
         display: block;
         width: 4em;
         float: right;
         margin-top: 0.5em;
+        @media screen and (max-width: 768px) {
+            margin-top: 1em;
+        }
     }
 }
 
 .soft_test_right {
-    width: 80%;
     float: left;
     line-height: 3em;
     overflow: hidden;
     padding-top: 1em;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
     h3 {
         float: left;
         color: $primary-color-text;
-        padding: 0 1em;
         line-height: 1.5em;
+        padding-right: 0.5em;
+        @media screen and (max-width: 768px) {
+            padding: 0;
+            font-size: 1.5em;
+            width: 100%;
+        }
     }
     button {
+        position: relative;
         float: left;
-        color: $primary-color-text;
+        color: #FFFFFF;
         width: 8em;
         border-radius: 4px;
         padding-left: 3em;
-        margin-top: 0.5em;
-        background-color: $primary-deep-color;
+        background-color: #347dbb;
     }
-}
-
-.pmp_test_right {
-    button {
-        margin-top: 0.2em;
+    button::before {
+        font-family: 'Glyphicons Halflings';
+        content: ' \e065';
+        position: absolute;
+        font-size: 1.5em;
+        left: 0.6em;
+        top: 0;
     }
-}
-
-// pmp模拟测试
-.pmp_test_right {
-    padding-left: 10%;
 }
 
 .soft_banner_div {
@@ -1925,6 +2168,11 @@
             text-decoration: none;
         }
     }
+}
+
+.soft_bottom_part a {
+    color: #fff;
+    line-height: 2;
 }
 
 .soft_bottom_left {
