@@ -904,6 +904,9 @@ button {
   .soft_title .soft_left {
     float: left;
     font-weight: bold; }
+    @media screen and (max-width: 768px) {
+      .soft_title .soft_left {
+        padding: 0; } }
     .soft_title .soft_left span:first-child {
       padding-right: 0.2em;
       padding-top: 0.1em; }
@@ -922,6 +925,9 @@ button {
     .soft_title .soft_right span:first-child {
       padding-top: 0.1em;
       padding-right: 1em; }
+      @media screen and (max-width: 768px) {
+        .soft_title .soft_right span:first-child {
+          padding-right: 0; } }
       .soft_title .soft_right span:first-child img {
         display: block;
         width: 1.2em;
@@ -1050,7 +1056,7 @@ button {
       .soft_banner .soft_banner_img .pmp_top_ul li span {
         border-width: 0;
         background-image: url(src/pmp_start.png);
-        background-size: contain;
+        background-size: 100% 2em;
         background-repeat: no-repeat;
         background-color: transparent; }
   .soft_banner .pmp_banner_img dt {
@@ -1132,7 +1138,8 @@ button {
   width: 100%;
   height: 580px;
   position: relative;
-  box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18); }
+  box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18);
+  overflow: scroll; }
 
 .soft_act_content1 {
   padding-bottom: 2em; }
@@ -1240,14 +1247,16 @@ button {
   @media screen and (max-width: 768px) {
     .soft_act_bottom {
       padding-top: 2em;
-      padding-bottom: 0; } }
+      padding-bottom: 2em; } }
   .soft_act_bottom span {
     float: left;
     width: 33%;
     text-align: left;
-    line-height: 2em; }
+    line-height: 2em;
+    padding-left: calc(16% - 5em); }
     @media screen and (max-width: 768px) {
       .soft_act_bottom span {
+        padding: 0;
         width: 100%;
         margin-bottom: 1em; } }
   .soft_act_bottom button,
@@ -1283,16 +1292,13 @@ button {
     background-image: url(src/enlist.png); }
 
 .soft_act_content1 {
-  overflow: hidden;
+  overflow: auto;
   padding-top: 5%; }
   .soft_act_content1 ul {
     float: left;
     overflow: hidden;
     border-right: 1px dotted #a2a2a2;
     padding-top: 2em; }
-    @media screen and (max-width: 768px) {
-      .soft_act_content1 ul {
-        padding-top: 0; } }
     .soft_act_content1 ul li {
       float: left;
       width: 100%;
@@ -1309,6 +1315,13 @@ button {
         color: #b9b9b9; }
       .soft_act_content1 ul li span:nth-of-type(2) {
         font-size: 1.2em; }
+    @media screen and (max-width: 768px) {
+      .soft_act_content1 ul {
+        border: none;
+        border-bottom: 1px solid #a2a2a2;
+        padding-top: 0; }
+        .soft_act_content1 ul li span {
+          text-align: center; } }
   .soft_act_content1 ul:last-child {
     border: 0; }
 
@@ -1535,6 +1548,10 @@ button {
   width: 100%;
   padding: 2em;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .soft_lesson_big_box {
+      padding: 0;
+      padding-top: 2em; } }
   .soft_lesson_big_box .soft_lesson_left,
   .soft_lesson_big_box .soft_lesson_right {
     float: left;
@@ -1604,6 +1621,17 @@ button {
   background-position-y: 0.7em;
   border-top: 1px solid #969696;
   border-bottom: 1px solid #969696; }
+  @media screen and (max-width: 768px) {
+    .soft_lesson_content {
+      height: auto; } }
+
+@media screen and (max-width: 768px) {
+  .screen_none {
+    display: none; } }
+
+@media screen and (min-width: 768px) {
+  .screen_big_none {
+    display: none; } }
 
 .soft_lesson_top {
   width: 100%;
@@ -1873,6 +1901,10 @@ button {
   .soft_serve_title dt {
     width: 10em; } }
 
+@media screen and (max-width: 768px) {
+  .pmp_serve_title dt {
+    width: 9em; } }
+
 .soft_srver_row1 {
   padding-top: 6em;
   padding-bottom: 2em; }
@@ -2015,6 +2047,9 @@ button {
         position: relative;
         padding-left: 5.5em;
         height: 7em; }
+        @media screen and (max-width: 768px) {
+          .soft_open_part .soft_open_qi ul li {
+            height: 5em; } }
         .soft_open_part .soft_open_qi ul li span {
           float: left;
           width: 100%; }
@@ -2045,6 +2080,9 @@ button {
     padding-top: 2em;
     width: 100%;
     overflow: hidden; }
+    @media screen and (max-width: 768px) {
+      .soft_open_part .soft_set {
+        padding-top: 1em; } }
     .soft_open_part .soft_set .soft_set_info {
       float: left;
       line-height: 2em;
