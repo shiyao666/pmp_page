@@ -875,6 +875,10 @@ button {
 .glyphicon-menu-up:before {
   content: "\e260"; }
 
+@media screen and (max-width: 768px) {
+  .soft_max_box .soft_right {
+    padding: 0; } }
+
 .soft_largest_box {
   width: 100%;
   background: #fff;
@@ -1138,8 +1142,10 @@ button {
   width: 100%;
   height: 580px;
   position: relative;
-  box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18);
-  overflow: scroll; }
+  box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18); }
+  @media screen and (max-width: 768px) {
+    .soft_act_content {
+      overflow: scroll; } }
 
 .soft_act_content1 {
   padding-bottom: 2em; }
@@ -1591,7 +1597,7 @@ button {
       background-image: url(src/lesson1_before.png); }
     .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li:nth-of-type(2)::before {
       background-image: url(src/lesson2_before.png); }
-    .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li:last-child::before {
+    .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li:nth-of-type(3)::before {
       background-image: url(src/lesson3_before.png); }
     .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li.active {
       color: #FFFFFF;
@@ -1600,7 +1606,7 @@ button {
       background-image: url(src/lesson_act_before1.png); }
     .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li:nth-of-type(2).active::before {
       background-image: url(src/lesson_act_before2.png); }
-    .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li:last-child.active::before {
+    .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li:nth-of-type(3).active::before {
       background-image: url(src/lesson_act_before3.png); }
     .soft_lesson_big_box .soft_lesson_left .soft_lesson_left_ul ul li.active::after {
       display: block;
@@ -1896,6 +1902,10 @@ button {
 
 .soft_server {
   padding-top: 4em; }
+  @media screen and (max-width: 768px) {
+    .soft_server {
+      padding: 0;
+      padding-top: 3em; } }
 
 @media screen and (min-width: 768px) {
   .soft_serve_title dt {
@@ -1958,6 +1968,10 @@ button {
     width: 100%;
     display: block; }
 
+@media screen and (max-width: 768px) {
+  .soft_largest_box6 {
+    padding-top: 2em; } }
+
 .soft_open_part {
   padding-left: 3em;
   padding-top: 5em; }
@@ -1968,11 +1982,11 @@ button {
     .soft_open_part .soft_open_title dt {
       width: 8em; } }
   .soft_open_part .soft_open_topbox {
-    padding-bottom: 1em; }
+    padding-bottom: 3em; }
   .soft_open_part .soft_open_content {
     position: relative;
     margin-right: 3em;
-    width: 98%;
+    width: 100%;
     float: left;
     padding-left: 2em;
     padding-top: 1em;
@@ -2415,6 +2429,10 @@ button {
     .ad_ul_div {
       padding-top: 0; } }
 
+@media screen and (max-width: 768px) {
+  .soft_bottom_carousel {
+    padding: 0; } }
+
 .carousel-inner {
   width: 100%; }
   .carousel-inner .item {
@@ -2632,6 +2650,10 @@ button {
 .soft_bottom_part a {
   color: #fff;
   line-height: 2; }
+
+@media screen and (max-width: 768px) {
+  .bottom_banner_part {
+    display: none; } }
 
 .soft_bottom_left {
   overflow: hidden;

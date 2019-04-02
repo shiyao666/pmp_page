@@ -82,8 +82,8 @@ function start_fuc() {
 $(document).ready(function () {
     // 顶部tab 固定栏目切换
     $("#tabs ul li").hover(function () {
-        $(this).addClass("active").siblings().removeClass("active");
-        var index = $(this).index();
+        $(this).addClass("active").siblings("li").removeClass("active");
+        var index = $(this).index() / 2;
         $('#tabs_content .soft_lesson_content').eq(index).fadeIn(10).siblings('#tabs_content .soft_lesson_content').hide();
     });
     $("#open_four .soft_open_qi").hover(function () {

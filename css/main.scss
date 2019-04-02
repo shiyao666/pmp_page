@@ -3,7 +3,13 @@
 @import 'color';
 @import 'font';
 
-.soft_max_box {}
+.soft_max_box {
+    @media screen and (max-width: 768px) {
+        .soft_right {
+            padding: 0;
+        }
+    }
+}
 
 .soft_largest_box {
     width: 100%;
@@ -85,6 +91,7 @@
 
             img {
                 display: block;
+
                 width: 1.2em;
                 height: auto;
             }
@@ -386,7 +393,10 @@
     height: 580px;
     position: relative;
     box-shadow: 0px 1px 29px 0px rgba(136, 56, 244, 0.18);
-    overflow: scroll;
+
+    @media screen and (max-width: 768px) {
+        overflow: scroll;
+    }
 }
 
 .soft_act_content1 {
@@ -630,8 +640,9 @@
             border: none;
             border-bottom: 1px solid $active_border_color;
             padding-top: 0;
-            li{
-                span{
+
+            li {
+                span {
                     text-align: center;
                 }
             }
@@ -1018,7 +1029,7 @@
                     background-image: url(src/lesson2_before.png);
                 }
 
-                li:last-child::before {
+                li:nth-of-type(3)::before {
                     background-image: url(src/lesson3_before.png);
                 }
 
@@ -1035,7 +1046,7 @@
                     background-image: url(src/lesson_act_before2.png);
                 }
 
-                li:last-child.active::before {
+                li:nth-of-type(3).active::before {
                     background-image: url(src/lesson_act_before3.png);
                 }
 
@@ -1472,6 +1483,11 @@
 // 制定服务区域
 .soft_server {
     padding-top: 4em;
+
+    @media screen and (max-width: 768px) {
+        padding: 0;
+        padding-top: 3em;
+    }
 }
 
 .soft_serve_title {
@@ -1564,6 +1580,12 @@
 // 开班计划区域
 .soft_open_row {}
 
+.soft_largest_box6 {
+    @media screen and (max-width: 768px) {
+        padding-top: 2em;
+    }
+}
+
 .soft_open_part {
     padding-left: 3em;
     padding-top: 5em;
@@ -1581,13 +1603,13 @@
     }
 
     .soft_open_topbox {
-        padding-bottom: 1em;
+        padding-bottom: 3em;
     }
 
     .soft_open_content {
         position: relative;
         margin-right: 3em;
-        width: 98%;
+        width: 100%;
         float: left;
         padding-left: 2em;
         padding-top: 1em;
@@ -2190,7 +2212,11 @@
 }
 
 // 底部轮播图盒子
-.soft_bottom_carousel {}
+.soft_bottom_carousel {
+    @media screen and (max-width: 768px) {
+        padding: 0;
+    }
+}
 
 // 底部轮播区域
 .carousel-inner {
@@ -2483,6 +2509,12 @@
 .soft_bottom_part a {
     color: #fff;
     line-height: 2;
+}
+
+.bottom_banner_part {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
 }
 
 .soft_bottom_left {
