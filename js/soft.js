@@ -49,7 +49,7 @@ function start_fuc() {
         type: "post",
         dataType: "json",
         async: true,
-        url: '192.168.60.175:666/activity/enroll/page',
+        url: 'https://erp.csst.com.cn/activity/enroll/page',
         data: {
             "act_token": "pmp8546omgt"
         },
@@ -58,7 +58,7 @@ function start_fuc() {
             for (var i = 0; i < event1.data.length; i++) {
                 // console.log(event1.data[i].activity_content);
                 // console.log($(".soft_open_qi").eq(i).find("li.soft_name span:eq(2)"));
-                setCookie("page_token", event1)
+                localStorage.setItem("page_token", event1)
                 $(".soft_open_qi").eq(i).find("li.soft_content1 span:eq(0)").text(event1.data[i].activity_content.title1);
                 $(".soft_open_qi").eq(i).find("li.soft_content1 span:eq(1)").text(event1.data[i].activity_content.content1);
                 $(".soft_open_qi").eq(i).find("li.soft_content2 span:eq(0)").text(event1.data[i].activity_content.title2);
@@ -69,7 +69,7 @@ function start_fuc() {
                 $(".soft_open_qi").eq(i).find("li.soft_content4 span:eq(1)").text(event1.data[i].activity_content.content4);
                 $(".soft_open_qi").eq(i).find(".soft_set_info b").text(event1.data[i].max_number - event1.data[i].sign_up_number);
                 $(".soft_open_qi").eq(i).find(".soft_qi_num").text(event1.data[i].activity_content.head_name);
-                setCookie("page_token" + [i] + "", Array(event1.data[i].page_token));
+                localStorage.setItem("page_token" + [i] + "", Array(event1.data[i].page_token));
             }
 
         },
@@ -89,16 +89,16 @@ $(document).ready(function () {
     $("#open_four .soft_open_qi").hover(function () {
         $(this).addClass("active animated pulse").siblings().removeClass("active animated pulse");
     });
-    $("#soft_act1 li").click(function () {
-        $(this).addClass("active animated pulse").siblings().removeClass("active animated pulse");
-        $("#soft_act2 li").removeClass("active animated pulse");
+    // $("#soft_act1 li").click(function () {
+    //     $(this).addClass("active animated pulse").siblings().removeClass("active animated pulse");
+    //     $("#soft_act2 li").removeClass("active animated pulse");
 
-    });
-    $("#soft_act2 li").click(function () {
-        $(this).addClass("active animated pulse").siblings().removeClass("active animated pulse");
-        $("#soft_act1 li").removeClass("active animated pulse");
+    // });
+    // $("#soft_act2 li").click(function () {
+    //     $(this).addClass("active animated pulse").siblings().removeClass("active animated pulse");
+    //     $("#soft_act1 li").removeClass("active animated pulse");
 
-    })
+    // })
 })
 // 获取act_token所在索引定位
 var act_num = null;
@@ -165,10 +165,10 @@ $(document).ready(function () {
                 type: 'post',
                 dataType: 'json',
                 async: 'ture',
-                url: '192.168.60.175:666/activity/enroll/commit',
+                url: 'https://erp.csst.com.cn/activity/enroll/commit',
                 data: {
                     number: $("#recipient-phonenum").val(),
-                    act_token: getCookie("page_token" + act_num + "")
+                    act_token: localStorage.getItem("page_token" + act_num + "")
                 },
                 success: function (even_code) {
                     if (even_code.error == 0) {
@@ -246,13 +246,13 @@ $(document).ready(function () {
                 type: 'post',
                 dataType: 'json',
                 async: 'ture',
-                url: '192.168.60.175:666/activity/enroll/send_data',
+                url: 'https://erp.csst.com.cn/activity/enroll/send_data',
                 data: {
                     number: $("#recipient-phonenum").val(),
                     code: $("#message-code").val(),
                     name: $("#recipient-name").val(),
                     company_name: $("#message-text").val(),
-                    act_token: getCookie("page_token" + act_num + "")
+                    act_token: localStorage.getItem("page_token" + act_num + "")
                 },
                 success: function (event2) {
                     $("#alert_error_box").alert(event2.msg);
@@ -419,7 +419,7 @@ function getScrollHeight() {
 //             localStorage.setItem("user_token", passwd);
 //         }
 //         //get请求,用于统计页面访问数
-//         $.get("192.168.60.175:666/activity/enroll/browse&user_token=" + localStorage.user_token + "&act_token=afuxnsd524d", function (data, status) {
+//         $.get("https://erp.csst.com.cn/activity/enroll/browse&user_token=" + localStorage.user_token + "&act_token=afuxnsd524d", function (data, status) {
 //             // alert("数据：" + data + "\n状态：" + status);
 //         });
 //     }
@@ -429,9 +429,21 @@ function getScrollHeight() {
 $(document).ready(function () {
     var password = Date.parse(new Date()).toString() + Math.ceil(Math.random() * 10000).toString();
     //加密成md5
+
     var passwd = $.md5(password);
-    localStorage.setItem("user_token", passwd)
-    $.get("192.168.60.175:666/activity/enroll/browse&user_token=" + localStorage.user_token + "&act_token=pmp8546omgt", function (data, status) {
-        // alert("数据：" + data + "\n状态：" + status);
-    });
+
+    setCookie("user_token", "sda");
+
+    if (localStorage.getItem("user_token")) {
+        $.get("https://erp.csst.com.cn/activity/enroll/browse&user_token=" + localStorage.getItem("user_token") + "&act_token=pmp8546omgt", function (data, status) {
+            // alert("数据：" + data + "\n状态：" + status);
+        });
+    } else {
+        localStorage.setItem("user_token", passwd);
+
+        $.get("https://erp.csst.com.cn/activity/enroll/browse&user_token=" + localStorage.getItem("user_token") + "&act_token=pmp8546omgt", function (data, status) {
+            // alert("数据：" + data + "\n状态：" + status);
+        });
+    }
+    //browse&user_token=797121dd22f86a20d199afdb04215d9c&act_token=pmp8546omgt
 })

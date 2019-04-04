@@ -1076,7 +1076,7 @@ button {
 
 .soft_act_new {
   width: 100%;
-  padding: 6em 0 0 6%;
+  padding-top: 2em;
   position: relative;
   z-index: 1;
   height: initial; }
@@ -1193,15 +1193,14 @@ button {
 .soft_act_part1 {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  padding-left: 6%; }
+  overflow: hidden; }
   @media screen and (max-width: 768px) {
     .soft_act_part1 {
       padding: 0; } }
   .soft_act_part1 li {
     float: left;
     padding: 1em;
-    width: 90%;
+    width: 100%;
     height: 105px;
     text-align: center;
     opacity: 0.8; }
@@ -1338,7 +1337,7 @@ button {
   overflow: hidden;
   width: 100%;
   border: 1px solid #ffb79d;
-  padding: 1em 0 0 0; }
+  padding: 1em 0 1em 0; }
   .soft_info_content .soft_info_stitle dt {
     display: block;
     width: 4em;
@@ -1395,10 +1394,6 @@ button {
   border-bottom: 1px solid #ffb79d; }
 
 .soft_info_part1,
-.soft_info_part3 {
-  border-right: 1px solid #ffb79d; }
-
-.soft_info_part1,
 .soft_info_part2,
 .soft_info_part3,
 .soft_info_part4 {
@@ -1411,6 +1406,13 @@ button {
 .soft_info_part3,
 .soft_info_part4 {
   padding-bottom: 0; }
+
+.soft_info_part2,
+.soft_info_part4 {
+  border-left: 1px solid #ffb79d; }
+
+.soft_info_part2 p {
+  padding-bottom: 1em; }
 
 .soft_info_detail span {
   color: #c2c2c2;
@@ -1552,7 +1554,7 @@ button {
 
 .soft_lesson_big_box {
   width: 100%;
-  padding: 2em;
+  padding-top: 2em;
   overflow: hidden; }
   @media screen and (max-width: 768px) {
     .soft_lesson_big_box {
@@ -1651,20 +1653,6 @@ button {
     text-align: center;
     position: relative;
     font-weight: bold; }
-  .soft_lesson_top span::before {
-    content: ' ';
-    display: block;
-    width: 4em;
-    height: 4em;
-    position: absolute;
-    left: calc(50% - 2em);
-    top: 1em;
-    background-image: url(src/yun.png);
-    background-repeat: no-repeat;
-    background-size: contain; }
-    @media screen and (max-width: 768px) {
-      .soft_lesson_top span::before {
-        top: 0.5em; } }
   @media screen and (max-width: 768px) {
     .soft_lesson_top span:nth-child(2)::before,
     .soft_lesson_top span:nth-child(3)::before {
@@ -1689,13 +1677,13 @@ button {
   background-position-x: 40%; }
 
 .soft_lesson_bgimg1 {
-  background-image: url(src/splan1.png); }
+  background-image: url(src/splan3.png); }
 
 .soft_lesson_bgimg2 {
   background-image: url(src/splan2.png); }
 
 .soft_lesson_bgimg3 {
-  background-image: url(src/splan3.png); }
+  background-image: url(src/splan1.png); }
 
 .soft_team_part {
   padding-top: 7em; }
@@ -1862,7 +1850,7 @@ button {
     margin-top: 2em; }
 
 .soft_item_row:first-child .soft_team_item:first-child .soft_team_top span {
-  background-image: url(src/liupeichun.jpg); }
+  background-image: url(src/wangxiaogang.jpg); }
 .soft_item_row:first-child .soft_team_item:nth-of-type(2) .soft_team_top span {
   background-image: url(src/wangqifu.jpg); }
 .soft_item_row:first-child .soft_team_item:nth-of-type(3) .soft_team_top span {
@@ -1976,7 +1964,6 @@ button {
     padding-top: 2em; } }
 
 .soft_open_part {
-  padding-left: 3em;
   padding-top: 5em; }
   @media screen and (max-width: 768px) {
     .soft_open_part {
@@ -2290,11 +2277,11 @@ button {
 .ad_after_bg::after {
   position: absolute;
   right: -2em;
-  bottom: 0;
+  bottom: 30px;
   content: ' ';
   display: block;
   width: 30px;
-  height: 288px;
+  height: 210px;
   background-image: url(src/after_bg.png);
   background-repeat: no-repeat;
   background-size: contain; }
@@ -2310,12 +2297,14 @@ button {
 .ad_img1,
 .ad_img2,
 .ad_img3 {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 2em; }
   .ad_img1 img,
   .ad_img2 img,
   .ad_img3 img {
     display: block;
     width: 6.5em;
+    margin: 0;
     margin: auto; }
 
 .ad_big_font1,

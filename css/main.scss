@@ -303,7 +303,7 @@
 //活动新闻区域
 .soft_act_new {
     width: 100%;
-    padding: 6em 0 0 6%;
+    padding-top: 2em;
     position: relative;
     z-index: 1;
     height: initial;
@@ -454,7 +454,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    padding-left: 6%;
 
     @media screen and (max-width: 768px) {
         padding: 0;
@@ -463,7 +462,7 @@
     li {
         float: left;
         padding: 1em;
-        width: 90%;
+        width: 100%;
         height: 105px;
         text-align: center;
         opacity: 0.8;
@@ -665,7 +664,7 @@
     overflow: hidden;
     width: 100%;
     border: 1px solid $info_border_color;
-    padding: 1em 0 0 0;
+    padding: 1em 0 1em 0;
 
     .soft_info_stitle {
         dt {
@@ -734,10 +733,10 @@
     border-bottom: 1px solid $info_border_color;
 }
 
-.soft_info_part1,
-.soft_info_part3 {
-    border-right: 1px solid $info_border_color;
-}
+// .soft_info_part1,
+// .soft_info_part3 {
+//     border-right: 1px solid $info_border_color;
+// }
 
 .soft_info_part1,
 .soft_info_part2,
@@ -754,6 +753,17 @@
 .soft_info_part3,
 .soft_info_part4 {
     padding-bottom: 0;
+}
+
+.soft_info_part2,
+.soft_info_part4 {
+    border-left: 1px solid $info_border_color;
+}
+
+.soft_info_part2 {
+    p {
+        padding-bottom: 1em;
+    }
 }
 
 .soft_info_detail {
@@ -963,7 +973,7 @@
 
 .soft_lesson_big_box {
     width: 100%;
-    padding: 2em;
+    padding-top: 2em;
     overflow: hidden;
 
     @media screen and (max-width: 768px) {
@@ -1108,22 +1118,22 @@
         font-weight: bold;
     }
 
-    span::before {
-        content: ' ';
-        display: block;
-        width: 4em;
-        height: 4em;
-        position: absolute;
-        left: calc(50% - 2em);
-        top: 1em;
-        background-image: url(src/yun.png);
-        background-repeat: no-repeat;
-        background-size: contain;
+    // span::before {
+    //     content: ' ';
+    //     display: block;
+    //     width: 4em;
+    //     height: 4em;
+    //     position: absolute;
+    //     left: calc(50% - 2em);
+    //     top: 1em;
+    //     background-image: url(src/yun.png);
+    //     background-repeat: no-repeat;
+    //     background-size: contain;
 
-        @media screen and (max-width: 768px) {
-            top: 0.5em;
-        }
-    }
+    //     @media screen and (max-width: 768px) {
+    //         top: 0.5em;
+    //     }
+    // }
 
     span:nth-child(2)::before,
     span:nth-child(3)::before {
@@ -1159,7 +1169,7 @@
 }
 
 .soft_lesson_bgimg1 {
-    background-image: url(src/splan1.png);
+    background-image: url(src/splan3.png);
 }
 
 .soft_lesson_bgimg2 {
@@ -1167,7 +1177,7 @@
 }
 
 .soft_lesson_bgimg3 {
-    background-image: url(src/splan3.png);
+    background-image: url(src/splan1.png);
 }
 
 // 团队6栏
@@ -1392,7 +1402,7 @@
     .soft_team_item:first-child {
         .soft_team_top {
             span {
-                background-image: url(src/liupeichun.jpg);
+                background-image: url(src/wangxiaogang.jpg);
             }
         }
     }
@@ -1591,7 +1601,6 @@
 }
 
 .soft_open_part {
-    padding-left: 3em;
     padding-top: 5em;
 
     @media screen and (max-width: 768px) {
@@ -2035,11 +2044,11 @@
 .ad_after_bg::after {
     position: absolute;
     right: -2em;
-    bottom: 0;
+    bottom: 30px;
     content: ' ';
     display: block;
     width: 30px;
-    height: 288px;
+    height: 210px;
     background-image: url(src/after_bg.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -2067,10 +2076,12 @@
 .ad_img2,
 .ad_img3 {
     width: 100%;
+    margin-bottom: 2em;
 
     img {
         display: block;
         width: 6.5em;
+        margin: 0;
         margin: auto;
     }
 }
